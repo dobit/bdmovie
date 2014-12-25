@@ -21,7 +21,7 @@ namespace LFNet.BdMovie
 
         public void Copy()
         {
-            FileStream fileStream=new FileStream(File,FileMode.Open,FileAccess.Read);
+            FileStream fileStream=new FileStream(File,FileMode.Open,FileAccess.Read,FileShare.ReadWrite);
             fileStream.Position = Position;
             byte[] data = new byte[4096*256]; //4kb*256
             int l=  fileStream.Read(data, 0, data.Length);
@@ -42,20 +42,25 @@ namespace LFNet.BdMovie
 
             if (lastdataPos > -1) //发现有效数据
             {
-                FileStream desStream=new FileStream(DestFile,FileMode.Append,FileAccess.Write);
+                FileStream desStream=new FileStream(DestFile,FileMode.OpenOrCreate,FileAccess.Write);
                 desStream.Position = Position;
                 desStream.Write(data, 0, lastdataPos + 1);
                 desStream.Close();
                 data = null;
                 Position += lastdataPos+1;
-                Console.WriteLine("本次读取写入{0}，{1}/{2}",lastdataPos,Position,fileStream.Length);
+                Console.WriteLine("本次读取写入{0}，{1}/{2}",lastdataPos+1,Position,fileStream.Length);
+            }
+            long len = fileStream.Length;
+            fileStream.Close();
+            if (Position <= len)
+            {
+                Thread.Sleep(10); //1s
+                Thread thread=new Thread(Copy);
+                thread.IsBackground = true;
+                thread.Start();
             }
 
-            fileStream.Close();
-            Thread.Sleep(10);//1s
-            System.Threading.Thread thread = new Thread(Copy);
-            thread.Start();
-            
+
         }
 
         
