@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFNet.BdMovie", "LFNet.BdMovie\LFNet.BdMovie.csproj", "{D9CBE3B7-FF1C-4B7B-85C7-A1EC2EBCF0C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BdMovieMonitor", "BdMovieMonitor\BdMovieMonitor.csproj", "{C4D10AEB-4A48-45F2-958D-9326095973E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BdMovie", "BdMovie\BdMovie.csproj", "{D472A94B-AD94-4A54-9201-63297BCAEB85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D9CBE3B7-FF1C-4B7B-85C7-A1EC2EBCF0C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9CBE3B7-FF1C-4B7B-85C7-A1EC2EBCF0C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9CBE3B7-FF1C-4B7B-85C7-A1EC2EBCF0C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C4D10AEB-4A48-45F2-958D-9326095973E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4D10AEB-4A48-45F2-958D-9326095973E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4D10AEB-4A48-45F2-958D-9326095973E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4D10AEB-4A48-45F2-958D-9326095973E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D472A94B-AD94-4A54-9201-63297BCAEB85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D472A94B-AD94-4A54-9201-63297BCAEB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D472A94B-AD94-4A54-9201-63297BCAEB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D472A94B-AD94-4A54-9201-63297BCAEB85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
